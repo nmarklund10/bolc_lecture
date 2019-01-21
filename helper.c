@@ -15,6 +15,10 @@ void explode_bomb() {
     exit(0);
 }
 
+int get_random_number() {
+  return rand() % 75 + 1;
+}
+
 void get_user_input(char* response, int phase){
     phase -= 1;
     if (phase < 0 || phase >= 5) {
@@ -52,19 +56,59 @@ void phase_2() {
 void phase_3() {
     char response[SIZE/4];
     get_user_input(response, 3);
-    // explode_bomb();
+    if (response[0] != 'r') {
+      explode_bomb();
+    }
+    if (response[1] != 'o') {
+      explode_bomb();
+    }
+    if (response[2] != 'y') {
+      explode_bomb();
+    }
+    if (response[3] != 'a') {
+      explode_bomb();
+    }
+    if (response[4] != 'l') {
+      explode_bomb();
+    }
+    if (response[5] != 'f') {
+      explode_bomb();
+    }
+    if (response[6] != 'l') {
+      explode_bomb();
+    }
+    if (response[7] != 'u') {
+      explode_bomb();
+    }
+    if (response[8] != 's') {
+      explode_bomb();
+    }
+    if (response[9] != 'h') {
+      explode_bomb();
+    }
 }
 
 void phase_4() {
     char response[SIZE/4];
+    int arr[4] = {1, 5, 12, 22};
     get_user_input(response, 4);
-    // explode_bomb();
+    int user_arr[4] = {0};
+    sscanf(response, "%d %d %d %d", &user_arr[0], &user_arr[1], &user_arr[2], &user_arr[3]);
+    for (int i = 0; i < 4; ++i) {
+      if (arr[i] != user_arr[i]) {
+        explode_bomb();
+      }
+    }
 }
 
 void phase_5() {
     char response[SIZE/4];
+    int freedom = get_random_number();
     get_user_input(response, 5);
-    // explode_bomb();
+    int i = atoi(response);
+    if (i != freedom) {
+      explode_bomb();
+    }
 }
 
 void signal_handler(int dummy) {

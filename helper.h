@@ -12,6 +12,8 @@ void set_fuse();
 
 void explode_bomb();
 
+int get_random_number();
+
 void get_user_input(char* buf, int phase);
 
 void phase_1();

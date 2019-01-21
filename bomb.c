@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
         return 0;
     }
     printf("There is a bomb you must defuse!  There are 5 phases you must pass.\n");
-    
+
     phase_1();
     phase_2();
     phase_3();
