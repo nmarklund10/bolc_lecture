@@ -5,7 +5,7 @@ void set_fuse() {
     signal(SIGTSTP, signal_handler);
     memset(input, 0, SIZE);
     for (int i = 0; i < 5; ++i) {
-        answers[i] = "";
+        user_answers[i] = "";
     }
 }
 
@@ -25,8 +25,8 @@ void get_user_input(char* response, int phase){
         printf("Error!\n");
         explode_bomb();
     }
-    if (strncmp(answers[phase], "", 1)) {
-        strncpy(response, answers[phase], SIZE/4 - 1);
+    if (strncmp(user_answers[phase], "", 1)) {
+        strncpy(response, user_answers[phase], SIZE/4 - 1);
         printf("Phase %d: %s\n", phase + 1, response);
     }
     else {

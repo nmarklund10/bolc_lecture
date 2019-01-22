@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
             char* result = strtok(input, "\n");
             int index = 0;
             while (result != NULL && index < 5) {
-                answers[index] = result;
+                user_answers[index] = result;
                 result = strtok(NULL, "\n");
                 ++index;
             }

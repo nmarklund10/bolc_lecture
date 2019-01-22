@@ -6,7 +6,7 @@
 #define SIZE 1024
 
 char input[SIZE];
-char* answers[5];
+char* user_answers[5];
 
 void set_fuse();
 
