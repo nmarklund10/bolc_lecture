@@ -93,7 +93,7 @@ void phase_4() {
     int arr[4] = {1, 5, 12, 22};
     get_user_input(response, 4);
     int user_arr[4] = {0};
-    sscanf(response, "%d %d %d %d", &user_arr[0], &user_arr[1], &user_arr[2], &user_arr[3]);
+    sscanf(response, "%d f %d f %d f %d", &user_arr[0], &user_arr[1], &user_arr[2], &user_arr[3]);
     for (int i = 0; i < 4; ++i) {
       if (arr[i] != user_arr[i]) {
         explode_bomb();
