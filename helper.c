@@ -16,6 +16,7 @@ void explode_bomb() {
 }
 
 int get_random_number() {
+  srand(1);
   return rand() % 75 + 1;
 }
 
@@ -103,10 +104,10 @@ void phase_4() {
 
 void phase_5() {
     char response[SIZE/4];
-    int freedom = get_random_number();
+    int j = get_random_number();
     get_user_input(response, 5);
     int i = atoi(response);
-    if (i != freedom) {
+    if (i != j) {
       explode_bomb();
     }
 }
