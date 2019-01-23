@@ -4,3 +4,4 @@ bomb
 *.txt
 .gdbinit
 .vscode
+main*
