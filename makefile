@@ -6,4 +6,4 @@ bomb: helper.o
 helper: helper.h
 	$(CC) $(CFLAGS) helper.c -o helper.o
 clean:
-	rm -rf *.o bomb
+	rm -rf *.o *bomb
