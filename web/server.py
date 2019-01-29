@@ -8,9 +8,10 @@ Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
 
 httpd = SocketServer.TCPServer(("", PORT), Handler)
 
-print("Type the following commands in order to download file:")
+print("Type the following commands in order to download files:")
 
-status, ip = commands.getstatusoutput("ip addr | grep 'inet ' | awk '{print $2}' | tr '/' ' ' | awk '{print $1}' | tail -n 1")
+ip = "10.50.21.2"
 print("    wget %s:%d/bomb" % (ip, PORT))
+print("    wget %s:%d/slides.pdf" % (ip, PORT))
 print("    chmod +x bomb")
 httpd.serve_forever()
