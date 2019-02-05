@@ -1,5 +1,4 @@
 *.o
-bomb
 *.json
 *.txt
 .gdbinit
