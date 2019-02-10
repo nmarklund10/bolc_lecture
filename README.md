@@ -1,3 +1,3 @@
-# bolc_lecture
+# GDB Reverse Engineering
 
-gdb reverse engineering
+Intended to teach people how to use gdb for reverse engineering
